@@ -1,0 +1,1 @@
+emoji-guard-de_DE.mo

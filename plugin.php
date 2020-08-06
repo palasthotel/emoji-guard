@@ -5,7 +5,7 @@ namespace Palasthotel\EmojiGuard;
 /**
  * Plugin Name: Emoji Guard
  * Plugin URI: https://palasthotel.de
- * Description: Checks data integrity
+ * Description: Checks data integrity of emojis
  * Version: 1.0.0
  * Author: Palasthotel (in Person: Edward Bock, Enno Welbers)
  * Author URI: https://palasthotel.de
@@ -13,10 +13,18 @@ namespace Palasthotel\EmojiGuard;
  * Domain Path: /languages
  */
 
+
+
 const DOMAIN = "emoji-guard";
 
+load_plugin_textdomain(
+	DOMAIN,
+	false,
+	plugin_basename( dirname( __FILE__ ) ) . '/languages'
+);
+
 const OPTION_EMOJI_VALIDATION_KEY = "_emoji_guard_validation";
-const OPTION_EMOJI_VALUE          = "🛡🦸‍♂️";
+const OPTION_EMOJI_VALUE          = "🛡🦸‍♂️ ";
 
 const FILTER_EMOJI_VALUE = "emoji_guard_value";
 
