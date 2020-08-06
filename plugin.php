@@ -16,13 +16,11 @@ namespace Palasthotel\EmojiGuard;
 const DOMAIN = "emoji-guard";
 
 const OPTION_EMOJI_VALIDATION_KEY = "_emoji_guard_validation";
-const OPTION_EMOJI_VALUE          = "🛡🦸⚔️👓";
+const OPTION_EMOJI_VALUE          = "🛡🦸‍♂️";
 
 const FILTER_EMOJI_VALUE = "emoji_guard_value";
 
 function admin_notices() {
-	// add dashboard widget?
-	// add admin bar icon?
 	if(
 	        isset($_POST["emoji-guard-overwrite"]) && $_POST["emoji-guard-overwrite"] === "true"
         &&
@@ -30,7 +28,6 @@ function admin_notices() {
     ){
 	    $value = build_emoji_value();
 		set_emoji_option_value( $value );
-
 		?>
         <div class="notice notice-success">
             <h2>Emoji Guard</h2>
@@ -63,7 +60,7 @@ function admin_notices() {
                     ?>
 					<input type="hidden" name="emoji-guard-overwrite" value="true" />
 					<button class="button button-primary">
-						Kein Fehler. Wert übernehmen.
+						<?php _e('Got the problem! Update validation option with valid emojis.', DOMAIN); ?>
 					</button>
 				</form>
 			</p>
