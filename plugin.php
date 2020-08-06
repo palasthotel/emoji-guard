@@ -24,7 +24,7 @@ load_plugin_textdomain(
 );
 
 const OPTION_EMOJI_VALIDATION_KEY = "_emoji_guard_validation";
-const OPTION_EMOJI_VALUE          = "🛡🦸‍♂️ ";
+const OPTION_EMOJI_VALUE          = "🛡🦸‍♂️";
 
 const FILTER_EMOJI_VALUE = "emoji_guard_value";
 
